@@ -1,0 +1,26 @@
+.profile-image{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table tr td{
+    padding: 15px 10px;
+    border: 1px solid #e2e2e2;
+}
+h1{
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* style card */
+mat-card{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+td{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

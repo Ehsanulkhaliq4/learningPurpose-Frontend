@@ -1,0 +1,22 @@
+<div class="bootstrap-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card *ngFor="let user of users">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{ user.username }}</mat-card-title>
+                <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <P>PHONE NO : <b>{{ user.phone }}</b></P>
+                <P>FIRST NAME : <b>{{ user.firstName }}</b></P>
+                <P>LAST NAME : <b>{{ user.lastName }}</b></P>
+                <P>AUTHORY : <b>{{user.authorities[0].authority }}</b></P>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button color="warn" (click)="deleteQuiz(user.id)">Delete</button>
+              </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+</div>

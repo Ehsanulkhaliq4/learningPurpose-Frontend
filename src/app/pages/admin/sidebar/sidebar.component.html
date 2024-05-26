@@ -1,0 +1,38 @@
+<mat-card id="sidebar">
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+        <button routerLink="/admin" mat-list-item>
+            <mat-icon aria-hidden="false" matListItemIcon>home</mat-icon> Home
+        </button>       
+        <button mat-list-item routerLink="/admin/profile">
+        <mat-icon matListItemIcon aria-hidden="false">account_circle</mat-icon> Profile
+        </button>
+        <button mat-list-item routerLink="/admin/categories">
+        <mat-icon matListItemIcon aria-hidden="false">list</mat-icon> Categories
+        </button>
+        <button mat-list-item routerLink="/admin/add-category">
+        <mat-icon matListItemIcon aria-hidden="false">add_circle_outline</mat-icon> Add Category
+        </button>
+        <button mat-list-item routerLink="/admin/quizzes">
+        <mat-icon matListItemIcon aria-hidden="false">quiz</mat-icon> Quizzez
+        </button>
+        <button mat-list-item routerLink="/admin/add-quiz">
+        <mat-icon matListItemIcon aria-hidden="false">add</mat-icon> Add Quizz
+        </button>
+        <button mat-list-item routerLink="/admin/create-post">
+        <mat-icon matListItemIcon aria-hidden="false">post_add</mat-icon> Add Blog
+        </button>
+        <button mat-list-item routerLink="/admin/view-all-blogs">
+        <mat-icon matListItemIcon aria-hidden="false">view_list</mat-icon> View All Blogs
+        </button>
+        <button mat-list-item routerLink="/admin/search-by-name">
+        <mat-icon matListItemIcon aria-hidden="false">search</mat-icon> Search Blogs
+        </button>
+        <button mat-list-item routerLink="/admin/add-book">
+        <mat-icon matListItemIcon aria-hidden="false">add_box</mat-icon> Add Book
+        </button>
+        <button mat-list-item routerLink="/admin/view-books">
+        <mat-icon matListItemIcon aria-hidden="false">book</mat-icon> View Books
+        </button>
+    </mat-action-list>
+</mat-card>

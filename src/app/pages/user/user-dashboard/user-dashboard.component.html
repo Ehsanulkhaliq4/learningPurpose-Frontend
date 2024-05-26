@@ -1,0 +1,22 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2" class="dev-menu">
+               <app-sidebar-user></app-sidebar-user>
+            </div>
+            <div class="mob-menu" style="margin-top: 10px; margin-left: 20px;"><button mat-button [matMenuTriggerFor]="usermenu">
+                <mat-icon>menu</mat-icon>Menu</button>
+                <mat-menu #usermenu="matMenu">
+                <button mat-menu-item routerLink="/user-dashboard/view-profile">Profile</button>
+                <button mat-menu-item routerLink="/user-dashboard/0">All Quizzes</button>
+                <button mat-menu-item routerLink="/user-dashboard/create-post">Create Blog</button> 
+                <button mat-menu-item routerLink="/user-dashboard/view-all-blogs">View All Blogs</button> 
+                <button mat-menu-item routerLink="/user-dashboard/search-blog">Search Blogs</button>
+                <button mat-menu-item routerLink="/user-dashboard/view-books">Book Store</button>
+                </mat-menu></div>
+            <div class="col-md-10">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="bootstrap-wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      @for (q of quizzes; track q) {
+      <mat-card class="mt10 mr10 ml10">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ q.title }}</mat-card-title>
+          <mat-card-subtitle>{{ q.category.title }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          {{ q.description }}
+        </mat-card-content>
+        <mat-card-actions>
+          <div style="display: flex; flex-wrap: wrap">
+            <button
+              [routerLink]="'/admin/view-questions/' + q.qId + '/' + q.title"
+              color="accent"
+              mat-raised-button
+            >
+              Question
+            </button>
+            <button color="accent" class="ml10" mat-stroked-button>
+              Max Marks : {{ q.maxMarks }}
+            </button>
+            <button color="accent" class="ml10" mat-stroked-button>
+              Number Of Questions : {{ q.numberOfQuestions }}
+            </button>
+            <button
+              [routerLink]="'/admin/quiz/' + q.qId"
+              color="accent"
+              class="ml10"
+              mat-raised-button
+            >
+              Update
+            </button>
+            <button
+              color="warn"
+              class="ml10"
+              mat-raised-button
+              (click)="deleteQuiz(q.qId)"
+            >
+              Delete
+            </button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+      }
+      <div class="container text-center mt20">
+        <button routerLink="/admin/add-quiz" mat-raised-button color="primary">
+          Add New Quiz
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

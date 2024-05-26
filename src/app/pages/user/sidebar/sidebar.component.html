@@ -1,0 +1,31 @@
+<mat-card id="sidebar">
+    <mat-action-list>
+        <div mat-subheader>Menu</div> 
+        <button mat-list-item routerLink="/user-dashboard/0">
+            <mat-icon aria-hidden="false" matListItemIcon>quiz</mat-icon> All Quizzes
+        </button>    
+        <button mat-list-item routerLink="/user-dashboard/view-profile">
+            <mat-icon aria-hidden="false" matListItemIcon>account_circle</mat-icon> Profile
+        </button>    
+    <button mat-list-item color="primary" [matMenuTriggerFor]="menu">
+        <mat-icon aria-hidden="false" matListItemIcon>quiz</mat-icon>Quiz Categories</button>
+    <mat-menu #menu="matMenu">
+        @for(c of categories; track c){
+     <button mat-menu-item [routerLink]="'/user-dashboard/'+c.cid">
+        <mat-icon matListItemIcon aria-hidden="false">quiz</mat-icon> {{c .title }}</button>
+    }
+   </mat-menu>
+    <button mat-list-item routerLink="/user-dashboard/create-post">
+        <mat-icon aria-hidden="false" matListItemIcon>post_add</mat-icon> Create Blog
+    </button> 
+    <button mat-list-item routerLink="/user-dashboard/view-all-blogs">
+        <mat-icon aria-hidden="false" matListItemIcon>view_list</mat-icon> View All Blogs
+    </button> 
+    <button mat-list-item routerLink="/user-dashboard/search-blog">
+        <mat-icon matListItemIcon aria-hidden="false">search</mat-icon> Search Blogs
+        </button>
+    <button mat-list-item routerLink="/user-dashboard/view-books">
+        <mat-icon matListItemIcon aria-hidden="false">book</mat-icon> Book Store
+        </button>
+    </mat-action-list>
+</mat-card>

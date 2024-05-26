@@ -1,0 +1,16 @@
+.dev-menu {
+    display: block; /* Display dev-menu by default */
+}
+.mob-menu {
+    display: none; /* Hide mob-menu by default */
+}
+
+/* Media query for screen width less than 1030px */
+@media screen and (max-width: 1250px) {
+    .dev-menu {
+        display: none; /* Hide dev-menu */
+    }
+    .mob-menu {
+        display: block; /* Display mob-menu */
+    }
+}

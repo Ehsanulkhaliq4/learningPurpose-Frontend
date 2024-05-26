@@ -1,0 +1,16 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+mat-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+}
+mat-card-title:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}

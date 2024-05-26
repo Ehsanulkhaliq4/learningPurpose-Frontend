@@ -1,0 +1,18 @@
+<mat-card class="mt10">
+    <h1 class="upadd">All Categories</h1>
+    <mat-list>
+        @for (c of categories; track c) {
+          <mat-list-item>
+            <mat-icon matListItemIcon>category</mat-icon>
+            <div matListItemTitle>{{ c.title }}</div>
+            <div matListItemLine>{{ c.description }}</div>
+           
+          </mat-list-item>
+          <mat-divider></mat-divider>
+        }
+      </mat-list>
+    <div class="container text-center mt10 upadd">
+        <button mat-raised-button color="accent" routerLink="/admin/add-category">Add Category</button>
+    </div>
+</mat-card>
+

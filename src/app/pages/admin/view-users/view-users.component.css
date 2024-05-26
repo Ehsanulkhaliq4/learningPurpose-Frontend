@@ -1,0 +1,12 @@
+.example-header-image {
+    background-image: url('../../../../assets/boy.png');
+    background-size: cover;
+  }
+
+  mat-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+}

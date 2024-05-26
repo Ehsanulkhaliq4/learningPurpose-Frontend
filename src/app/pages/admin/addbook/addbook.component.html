@@ -1,0 +1,42 @@
+<mat-card>
+    <h1 class="upadd">Add New Book</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Title</mat-label>
+                      <input matInput formControlName="title" required>
+                      <mat-error *ngIf="bookForm.get('title')?.invalid">Title is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Description</mat-label>
+                      <input matInput formControlName="description" required>
+                      <mat-error *ngIf="bookForm.get('description')?.invalid">Description is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Author Name</mat-label>
+                      <input matInput formControlName="author" required>
+                      <mat-error *ngIf="bookForm.get('author')?.invalid">Author Name is required</mat-error>
+                    </mat-form-field>
+              
+                    <div class="full-width file-input-wrapper">
+                      <label>Book Picture</label>
+                      <input type="file" (change)="onFileChange($event, 'picture')" accept="image/*" required>
+                      <mat-error *ngIf="pictureFileError">Picture is required and should be an image file</mat-error>
+                    </div>
+            
+                    
+              
+                    <div class="full-width file-input-wrapper">
+                      <label>Book (In PDF format)</label>
+                      <input type="file" (change)="onFileChange($event, 'pdf')" required>
+                      <mat-error *ngIf="pdfFileError">PDF is required and should be a PDF file</mat-error>
+                    </div>
+              
+                    <button mat-raised-button color="primary" type="submit" style="margin-bottom: 20px;" [disabled]="bookForm.invalid">Add Book</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</mat-card>

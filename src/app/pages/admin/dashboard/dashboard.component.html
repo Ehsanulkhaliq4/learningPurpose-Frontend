@@ -1,0 +1,57 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2" class="dev-menu">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="mob-menu" style="margin-top: 10px; margin-left: 20px;"><button mat-button [matMenuTriggerFor]="animals">
+                <mat-icon>menu</mat-icon>Menu</button>
+                <mat-menu #animals="matMenu">
+                <button mat-menu-item routerLink="/admin">
+                    <mat-icon aria-hidden="false">home</mat-icon> Home
+                </button>
+                <button mat-menu-item routerLink="/admin/profile">
+                    <mat-icon aria-hidden="false">account_circle</mat-icon> Profile
+                </button>
+                <button mat-menu-item routerLink="/admin/categories">
+                    <mat-icon aria-hidden="false">list</mat-icon> Categories
+                </button>
+                <button mat-menu-item routerLink="/admin/add-category">
+                    <mat-icon aria-hidden="false">add_circle_outline</mat-icon> Add Category
+                </button>
+
+                <button mat-menu-item routerLink="/admin/quizzes">
+                    <mat-icon aria-hidden="false">quiz</mat-icon> Quizzez
+                </button>
+
+
+                <button mat-menu-item routerLink="/admin/add-quiz">
+                    <mat-icon aria-hidden="false">add</mat-icon> Add Quizz
+                </button>
+
+                <button mat-menu-item routerLink="/admin/create-post">
+                    <mat-icon aria-hidden="false">post_add</mat-icon> Add Blog
+                </button>
+
+                <button mat-menu-item routerLink="/admin/view-all-blogs">
+                    <mat-icon aria-hidden="false">view_list</mat-icon> View All Blogs
+                </button>
+
+                <button mat-menu-item routerLink="/admin/search-by-name">
+                    <mat-icon aria-hidden="false">search</mat-icon> Search Blogs
+                </button>
+
+                <button mat-menu-item routerLink="/admin/add-book">
+                    <mat-icon aria-hidden="false">add_box</mat-icon> Add Book
+                </button>
+                <button mat-menu-item routerLink="/admin/view-books">
+                    <mat-icon aria-hidden="false">book</mat-icon> View Books
+                </button>
+
+                </mat-menu></div>
+            <div class="col-md-10">    
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
