@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PostService } from '../../../services/post.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CommentService } from '../../../services/comment.service';
 
@@ -23,7 +23,8 @@ export class ViewPostComponent {
     private activatedRouter:ActivatedRoute,
     private snackBar:MatSnackBar,
     private fb:FormBuilder,
-    private commentService:CommentService
+    private commentService:CommentService,
+    private route:Router
   ){}
 
   ngOnInit(){
@@ -65,6 +66,20 @@ export class ViewPostComponent {
         this.comments = res;
       },(err)=>{
         this.snackBar.open("Something went wrong !!!")
+      }
+    )
+  }
+  deletePost(){
+    this.postService.deletPost(this.postId).subscribe(
+      (data)=>{
+        this.snackBar.open("Post Deleted SuccessFully","Ok",{
+          duration:3000
+        })
+        this.route.navigateByUrl("/admin/view-all-blogs")
+      },(error)=>{
+        this.snackBar.open("Something Went Wrong","Try Again",{
+          duration:3000
+        })
       }
     )
   }

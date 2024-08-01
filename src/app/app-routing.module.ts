@@ -33,6 +33,11 @@ import { ViewBooksComponent } from './pages/admin/view-books/view-books.componen
 import { UserPrfileComponent } from './pages/user/user-prfile/user-prfile.component';
 import { UserViewBookComponent } from './pages/user/user-view-book/user-view-book.component';
 import { ViewUsersComponent } from './pages/admin/view-users/view-users.component';
+import { ContactUsComponent } from './pages/contactPopUp/contact-us/contact-us.component';
+import { TeamComponent } from './pages/team/team.component';
+import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
+import { VerifyOtpComponent } from './pages/changePasswordPages/verify-otp/verify-otp.component';
+import { ChangePasswordPageComponent } from './pages/changePasswordPages/change-password-page/change-password-page.component';
 const routes: Routes = [
   {
     path:'',
@@ -48,6 +53,24 @@ const routes: Routes = [
     path:'login',
     component:LoginComponent,
     pathMatch:'full'
+  },{
+    path:'contact-us',
+    component:ContactUsComponent
+  },
+  {
+    path:'forgot-password',
+    component:ForgotpasswordComponent
+  },{
+    path:'verify-otp-page',
+    component:VerifyOtpComponent
+  },
+  {
+    path:'change-password',
+    component:ChangePasswordPageComponent
+  },
+  {
+    path:'team-member',
+    component:TeamComponent
   },
   {
     path:'admin',

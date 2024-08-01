@@ -65,9 +65,11 @@ import { BookPopupComponent } from './pages/book-popup/book-popup.component';
 import { UserPrfileComponent } from './pages/user/user-prfile/user-prfile.component';
 import { UserViewBookComponent } from './pages/user/user-view-book/user-view-book.component';
 import { ViewUsersComponent } from './pages/admin/view-users/view-users.component';
-
-
-
+import { ContactUsComponent } from './pages/contactPopUp/contact-us/contact-us.component';
+import { TeamComponent } from './pages/team/team.component';
+import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
+import { VerifyOtpComponent } from './pages/changePasswordPages/verify-otp/verify-otp.component';
+import { ChangePasswordPageComponent } from './pages/changePasswordPages/change-password-page/change-password-page.component';
 
 @NgModule({
   declarations: [
@@ -107,7 +109,12 @@ import { ViewUsersComponent } from './pages/admin/view-users/view-users.componen
     BookPopupComponent,
     UserPrfileComponent,
     UserViewBookComponent,
-    ViewUsersComponent
+    ViewUsersComponent,
+    ContactUsComponent,
+    TeamComponent,
+    ForgotpasswordComponent,
+    VerifyOtpComponent,
+    ChangePasswordPageComponent,
   ],
   imports: [
     MatDialogModule,

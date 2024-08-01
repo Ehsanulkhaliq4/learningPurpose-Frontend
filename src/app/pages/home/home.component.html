@@ -1,10 +1,91 @@
-<div class="bootstrap-wrapper">
-    <div class="container">
-        <div class="row mt20">
-            <div class="col-md-6 offset-md-3 text-center">
-                <h1>Welcome To Learning Purpose</h1>
-                <button mat-raised-button color="accent">Home Page</button>
-            </div>
-        </div>
+<div class="landing-container">
+
+    <!-- Hero section -->
+  <div class="hero-section">
+    <h1 style="font-weight: bold">Welcome to Learning Purpose</h1>
+    <p>
+      The ultimate platform designed to elevate your educational experience.
+      Whether you're preparing for exams, seeking the best educational books, or
+      looking to engage with a community of knowledge seekers through our blogs,
+      we've got you covered. Our Exam Portal offers comprehensive resources and
+      analytics to help you excel, our Book Store provides a curated collection
+      of must-read academic materials, and our Blog is a space for sharing
+      insights and staying informed about the latest trends in education. Join
+      us and take the next step in your learning journey today!
+    </p>
+    <button routerLink="/login">Get Started !</button>
+  </div>
+
+  <section id="about">
+    <p class="section__text__p1">Explore Amazing</p>
+    <h1 class="title">Feature's</h1>
+  </section>
+
+
+  <div class="cards">
+  <div class="card">
+    <div class="icon">
+        <img class="image-height" src="assets/books.png" alt="Server Error !!!">
     </div>
+    <p class="title-card">Book Store</p>
+    <p class="text">Check all your favourites books in one place.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">
+        <img class="image-height" src="assets/blog.png" alt="Server Error !!!">
+    </div>
+    <p class="title-card">Blog's Collection</p>
+    <p class="text"> Unlock a world of knowledge and inspiration with every blog post.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">
+        <img class="image-height" src="assets/exam-card.png" alt="Server Error !!!">
+    </div>
+    <p class="title-card">Exam Portal</p>
+    <p class="text">Exams are the stepping stones to your future success.</p>
+  </div>
+</div>
+   <!-- About me Section -->
+<section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+  </section>
+
+  <div class="container">
+    <div class="image-side">
+      <img src="/assets/knowledge.gif" alt="Placeholder Image" />
+    </div>
+    <div class="text-side">
+      <p>
+        Welcome to Learning Purpose, your comprehensive educational companion.
+        This app is designed to cater to all your learning needs with three
+        main features: the Exam Portal, Blogs, and PDF Books. The Exam Portal
+        provides a robust platform to prepare for your exams with extensive
+        resources, practice tests, and detailed analytics to track your
+        progress. Our Blogs section keeps you engaged and informed with
+        insightful articles, tips, and the latest trends in the education
+        world. Additionally, the PDF Books section offers a curated collection
+        of essential academic materials, making it easier to access the best
+        educational books anytime, anywhere. With Learning Purpose, you have
+        everything you need to excel in your educational journey. The ultimate
+        platform designed to elevate your educational experience. Whether
+        you're preparing for exams, seeking the best educational books, or
+        looking to engage with a community of knowledge seekers through our
+        blogs, we've got you covered.
+      </p>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Learning Purpose. All rights reserved.</p>
+      <nav>
+        <a mat-button routerLink="/team-member">Team</a>
+        <a mat-button (click)="openpopup()">Contact Us</a>
+      </nav>
+    </div>
+  </footer>
 </div>

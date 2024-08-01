@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrl: './signup.component.css'
 })
 export class SignupComponent implements OnInit{
-  constructor(private userService:UserService , private snack:MatSnackBar){}
+  constructor(private userService:UserService , private snack:MatSnackBar,private route:Router){}
 
   public user={
     username:'',
@@ -39,8 +40,7 @@ export class SignupComponent implements OnInit{
         //success
         console.log(data);
         // alert('success');
-        Swal.fire('Successfully Done !!!','User with id '+data.id+' & username '+data.username+' is created','success')
-        return;
+        Swal.fire('Successfully Done !!!','User with id '+data.id+' & username '+data.username+' is created','success');
       },
       (error)=>{
         //error

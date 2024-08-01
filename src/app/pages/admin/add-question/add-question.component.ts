@@ -52,6 +52,7 @@ export class AddQuestionComponent implements OnInit{
     this._question.addQuestion(this.question).subscribe(
       (data)=>{
         Swal.fire('Success !!!','Question Added Successfully','success');
+        console.log(data);
         this.question.content=''
         this.question.option1=''
         this.question.option2=''
@@ -59,10 +60,13 @@ export class AddQuestionComponent implements OnInit{
         this.question.option4=''
         this.question.answer=''
       },
+      
       (error)=>{
         Swal.fire('Error !!!','Error in Adding Question','error');
       }
     )
+    console.log(this.question);
+    
   }
 
 }

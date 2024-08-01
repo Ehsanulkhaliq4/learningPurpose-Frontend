@@ -1,6 +1,7 @@
 /* Default styles */
 .dev-menu {
     display: block; /* Display dev-menu by default */
+    position:sticky;
 }
 .mob-menu {
     display: none; /* Hide mob-menu by default */

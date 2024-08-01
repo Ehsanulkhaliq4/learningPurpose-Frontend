@@ -23,4 +23,7 @@ export class UserService {
   public deleteUser(userId:any){
     return this.http.delete(`${baseUrl}/user/`+userId)
   }
+  public verifyUser(){
+    return this.http.get(`${baseUrl}/api/verify-email`)
+  }
 }

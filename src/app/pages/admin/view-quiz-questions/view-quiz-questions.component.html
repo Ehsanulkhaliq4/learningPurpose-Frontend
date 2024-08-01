@@ -34,7 +34,7 @@
                         <p class="mt20"><b>Correct Answer : </b>{{ q.answer }}</p>
                     </div>
                         <button mat-button color="warn" (click)="deleteQuestion(q.quesId)">Delete</button>
-                        <button mat-button color="primary" [routerLink]="'/admin/update-question/'+qId">Update</button>
+                        <button mat-button color="primary" [routerLink]="'/admin/update-question/'+q.quesId">Update</button>
                 </mat-card-content>
             </mat-card>
         </div>

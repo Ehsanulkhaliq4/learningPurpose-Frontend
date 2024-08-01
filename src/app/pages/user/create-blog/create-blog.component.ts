@@ -78,7 +78,7 @@ export class CreateBlogComponent {
               duration:5000
             }
           )
-          this.router.navigateByUrl("/admin/view-all-blogs")
+          this.router.navigateByUrl("/user-dashboard/view-all-blogs")
         },(err)=>{
           this.snakbar.open("Something went wrong !!!","TRY AGAIN",
             {

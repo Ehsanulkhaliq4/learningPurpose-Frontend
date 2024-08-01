@@ -23,5 +23,8 @@ export class PostService {
   searchByName(name:string):Observable<any>{
     return this._http.get(BASIC_URL + `api/post/search/${name}`)
   }
+  deletPost(id:any):Observable<any>{
+    return this._http.delete(BASIC_URL+`api/post/delete-post/${id}`);
+  }
 
 }

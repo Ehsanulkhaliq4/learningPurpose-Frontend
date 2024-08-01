@@ -3,6 +3,7 @@ import { BookService } from '../../../services/book.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { BookPopupComponent } from '../../book-popup/book-popup.component';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-user-view-book',
@@ -56,5 +57,7 @@ export class UserViewBookComponent {
       }
     })
   }
+
+
 
 }
